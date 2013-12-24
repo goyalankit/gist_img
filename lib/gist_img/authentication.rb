@@ -39,7 +39,7 @@ module GistImg
         end
 
         def write_token_to_file token
-            File.open(AUTH_FILE, "w") { |file| file.write("token:#{token}")}
+            File.open(AUTH_FILE, "a") { |file| file.write("token:#{token}")}
         end
 
         def create_client_from_token
